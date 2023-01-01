@@ -1,0 +1,3 @@
+myval = None
+print(myval)
+
