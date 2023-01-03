@@ -2,6 +2,7 @@ found_coins = 20
 magic_coins = 70
 stolen_coins = 3
 coins = found_coins
+#---------------------------
 
 for week in range(1, 53):
     coins = coins + magic_coins - stolen_coins
@@ -12,3 +13,4 @@ if found_coins == 20:
     print("Untouched and safe.")
 else:
     print("Value has been modified.")
+    
