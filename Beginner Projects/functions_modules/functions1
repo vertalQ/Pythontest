@@ -1,0 +1,7 @@
+fav_list = ['basketball', 'cards', 'icecream']
+#-----------------------------------
+
+def inlist(contents):
+    print("You have selected the following list to be listed: '%s' " % contents)    
+
+inlist(fav_list)
