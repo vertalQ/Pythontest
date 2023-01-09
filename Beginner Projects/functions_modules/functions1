@@ -1,7 +1,60 @@
+import time
+import sys
+import random
+t = time
+#-----------------------------------
 fav_list = ['basketball', 'cards', 'icecream']
+firstname = 'Wednesday'
+lastname = 'Adam'
+third_variable = 100
+rList = ['Orange', 'Apple', 'Grape', 'Bannana', 'Mango']
 #-----------------------------------
 
 def inlist(contents):
     print("You have selected the following list to be listed: '%s' " % contents)    
 
-inlist(fav_list)
+def fullname(fname, lname):
+    print('Hello %s %s!' % (fname, lname))
+
+def damageCalc(iDa, mod):
+    return iDa * mod
+
+def variable_test():
+    first_variable = 10
+    second_variable = 20
+    return first_variable * second_variable
+
+def variable_test2():
+    first_variable = 10
+    second_variable = 20
+    return first_variable * second_variable * third_variable
+
+def spaceship_building(cans):
+    total_cans = 0
+    for week in range(1, 53):
+        total_cans += cans
+        print('Week %s = %s cans' % (week, total_cans))
+
+#print(t.asctime())
+
+#ef pickFruit():
+#    while True:
+#        randomfruit = random.choice(rList)
+#        print('What fruit am I thinking of?')
+#        guess = sys.stdin.readline()
+#        print(guess)
+#        if randomfruit == guess:
+#            print('Good job!')
+#            break
+#        elif guess != randomfruit:
+#            print('Incorrect. I guessed %s. Try again!' % randomfruit)
+#
+#pickFruit()
+
+
+
+
+
+
+
+
