@@ -37,19 +37,19 @@ def spaceship_building(cans):
 
 #print(t.asctime())
 
-#ef pickFruit():
-#    while True:
-#        randomfruit = random.choice(rList)
-#        print('What fruit am I thinking of?')
-#        guess = sys.stdin.readline()
-#        print(guess)
-#        if randomfruit == guess:
-#            print('Good job!')
-#            break
-#        elif guess != randomfruit:
-#            print('Incorrect. I guessed %s. Try again!' % randomfruit)
-#
-#pickFruit()
+def pickFruit():
+    while True:
+        randomfruit = random.choice(rList)
+        print('What fruit am I thinking of?')
+        guess = str(sys.stdin.readline())
+        print(guess)
+        if randomfruit == guess:
+            print('Good job!')
+            break
+        elif guess != randomfruit:
+            print('Incorrect. I guessed %s. Try again!' % randomfruit)
+
+pickFruit()
 
 
 
