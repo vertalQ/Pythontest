@@ -29,8 +29,17 @@ class Mammals(Animals):
         print('feeding young')
 
 class Giraffes(Mammals):
+    def __init__(self, spots, friend):
+        self.giraffe_spots = spots
+        self.friend = friend
+
+    def find_food(self):
+        self.move()
+        print("I've found food!")
+        self.eat_food()
     def sing(self):
         print('La la la!')
+
 
 #class count:
 #    def add(self):
@@ -39,19 +48,18 @@ class Giraffes(Mammals):
 #        print(count)
 #--------------------------------
 
-reginald = Giraffes()
-harold = Giraffes()
+#reginald = Giraffes()
+#harold = Giraffes()
+ozwald = Giraffes(100, 'Gertrude')
+gertude = Giraffes(1020, 'Ozwald')
 
-harold.feed_young_with_milk()
-reginald.move()
-
-
-
-
-
+print(ozwald.giraffe_spots, ozwald.friend)
+print('...')
+print(gertude.giraffe_spots, gertude.friend)
 
 
-
+#harold.feed_young_with_milk()
+#reginald.find_food()
 #count1 = count()
 #count2 = count()
 #count1.add()
