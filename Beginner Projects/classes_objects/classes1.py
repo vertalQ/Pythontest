@@ -1,0 +1,3 @@
+class Things:
+    pass
+
