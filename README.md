@@ -9,8 +9,3 @@ To access them, you must:
 
 1. Go to 'Beginner Projects' directory.
 2. Select desired directory.
-
-## 2
-
-Shadow wizard money gang.
-We love casting spells!
