@@ -17,7 +17,8 @@ def gameChoice():
             fruitGuess()
             break
         elif choice == 3:
-            print("You are now playing: 'Less than or Greater.'")
+            greaterOrLess()
+            break
         elif choice == 4:
             print('Quitting program...')
             break
@@ -55,7 +56,29 @@ def fruitGuess():
                 break
         else:
             print('Incorrect! Try again!')
-        
+
+def greaterOrLess():
+    print("You are now playing: 'Less than or Greater.'")
+    while True:
+        com1 = random.randint(0, 100)
+        com2 = random.randint(0, 100)
+        answer = None
+        if com1 > com2:
+            answer = 'greater'
+        elif com1 < com2:
+            answer = 'less'
+        elif com1 == com2:
+            answer = 'equal' 
+        playerInput = input('Is %s greater, less, or equal to %s?: ' % (com1, com2)).lower()
+        if playerInput == answer:
+            chN = input('Well done! Would you like to play again? Y/N: ').lower()
+            if chN == 'n':
+                break
+            elif chN == 'menu':
+                gameChoice()
+                break
+        else:
+            print('Incorrect! Try again!')
 
 
 gameChoice()
