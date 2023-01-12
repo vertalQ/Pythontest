@@ -1,6 +1,7 @@
 import random
 #------------------------------------------------------
 fruits = ['apple', 'banana', 'melon', 'strawberries', 'mango']
+score = 0
 #------------------------------------------------------
 def gameChoice():
     while True:
