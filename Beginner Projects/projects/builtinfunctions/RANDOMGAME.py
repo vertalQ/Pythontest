@@ -1,5 +1,7 @@
 import random
 #------------------------------------------------------
+fruits = ['apple', 'banana', 'melon', 'strawberries', 'mango']
+#------------------------------------------------------
 def gameChoice():
     while True:
         choice = int(input('''Pick a game by inputting the number: 
@@ -12,7 +14,8 @@ def gameChoice():
             numberGuess()
             break 
         elif choice == 2:
-            print("You are now playing: 'Fruit Guess.'")
+            fruitGuess()
+            break
         elif choice == 3:
             print("You are now playing: 'Less than or Greater.'")
         elif choice == 4:
@@ -35,8 +38,23 @@ def numberGuess():
                 break
         else:
             print('Incorrect! Try again!')
-        
 
+def fruitGuess():
+    print("You are now playing: 'Fruit Guess.' ")
+    while True: 
+        gusfru = random.choice(fruits)
+        playerGuess = input('''Correctly guess a fruit from the following list!: 
+        %s
+        Guess: ''' % fruits)
+        if playerGuess == gusfru:
+            chN = input('Well done! Would you like to play again? Y/N: ').lower()
+            if chN == 'n':
+                break
+            elif chN == 'menu':
+                gameChoice()
+                break
+        else:
+            print('Incorrect! Try again!')
         
 
 
