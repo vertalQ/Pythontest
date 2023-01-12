@@ -9,6 +9,7 @@ def gameChoice():
     2. Fruit Guess.
     3. Less than or Greater.
     4. Quit program.
+    5. Check score.
     Game: '''))
         if choice == 1:
             numberGuess()
@@ -22,6 +23,8 @@ def gameChoice():
         elif choice == 4:
             print('Quitting program...')
             break
+        elif choice == 5:
+            print('Your score is: %s' % score)
         else:
             print('Invalid input. Please pick a number from the list.')
 
@@ -79,7 +82,6 @@ def greaterOrLess():
                 break
         else:
             print('Incorrect! Try again!')
-
 
 gameChoice()
     
