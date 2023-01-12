@@ -43,5 +43,12 @@
 
 #----------------------------------------
 
-calc = input('Enter a calculation: ')
-print(eval(calc))
+#calc = input('Enter a calculation: ')
+#print(eval(calc))
+
+#----------------------------------------
+
+smalltext = '''print('This')
+print('is')'''
+
+exec(smalltext)
