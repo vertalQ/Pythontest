@@ -31,8 +31,8 @@ def gameChoice():
 
 def numberGuess():
     print("You are now playing: 'Number Guess.' ")
+    gusnum = random.randint(0,10)
     while True: 
-        gusnum = random.randint(0,20)
         playerGuess = int(input('Correctly guess a number from 0 to 20!: '))
         if int(playerGuess) == gusnum:
             chN = input('Well done! Would you like to play again? Y/N: ').lower()
