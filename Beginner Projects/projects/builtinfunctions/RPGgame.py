@@ -4,6 +4,7 @@ t = time
 #----------------------------------------
 coins = 0
 hpPots = 0
+dmgInc = 0
 #----------------------------------------
 class Player:
     def __init__(self):
@@ -20,6 +21,7 @@ def beginGame():
     global player
     global coins
     global hpPots
+    global dmgInc
     while True:
         choice = int(input('''       Choose an Option        
     1. Shop.
@@ -47,7 +49,7 @@ def beginGame():
                 elif sCoI == 2:
                     if coins >= 10:
                         coins -= 10
-                        player.dmg == 5
+                        dmgInc = 3
                         print('Purchased Great Sword! You now deal 5 damage instead of 2.')
                     t.sleep(1.5)
                 elif sCoI == 3:
@@ -58,7 +60,8 @@ def beginGame():
                      -------------------
                          Health: %s
                        Purse: %s coins
-                     -------------------''' % (player.health, coins))
+                       Potions #: %s
+                     -------------------''' % (player.health, coins, hpPots))
             t.sleep(3)
         
         elif choice == 3:
@@ -67,7 +70,9 @@ def beginGame():
         elif choice == 4:
             if hpPots > 0:
                 hpPots -= 1
-                player.health == 20
+                player.health += 20
+                if player.health > 20:
+                    player.health -= player.health - 20 
                 print('Consumed healing potion! You have %s potion(s) left... ' % hpPots)
                 t.sleep(3)
             else:
@@ -82,6 +87,7 @@ def slimeField():
     global player
     global coins
     global hpPots
+    global dmgInc
     print('You are now in the slime field!')
     slime = Slime()
     while True:
@@ -91,7 +97,7 @@ def slimeField():
         3. Heal.
         Choice: '''))
         if dec == 1:
-            slime.health -= player.dmg
+            slime.health -= player.dmg + dmgInc
             player.health -= slime.dmg
             print('Slime HP: %s' % slime.health)
             print('Ouch! Player HP: %s' % player.health)
@@ -108,7 +114,7 @@ def slimeField():
                 elif choI.strip() == 'n':
                     beginGame()
                 else:
-                    print('Invalid option. Breaking program...')
+                    print('Invalid option. Returning to menu...')
                     break
         elif dec == 2:
             print('Running away...')
