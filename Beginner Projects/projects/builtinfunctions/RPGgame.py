@@ -45,7 +45,10 @@ def beginGame():
                         print('Insufficient balance!')
                         t.sleep(1.5)
                 elif sCoI == 2:
-                    print(sCoI)
+                    if coins >= 10:
+                        coins -= 10
+                        player.dmg == 5
+                        print('Purchased Great Sword! You now deal 5 damage instead of 2.')
                     t.sleep(1.5)
                 elif sCoI == 3:
                     beginGame()
