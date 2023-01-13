@@ -2,7 +2,7 @@ import time
 import sys
 t = time
 #----------------------------------------
-coins = 10
+coins = 0
 hpPots = 0
 dmgInc = 0
 #----------------------------------------
@@ -60,7 +60,8 @@ def beginGame():
                      -------------------
                          Health: %s
                        Purse: %s coins
-                     -------------------''' % (player.health, coins))
+                       Potions #: %s
+                     -------------------''' % (player.health, coins, hpPots))
             t.sleep(3)
         
         elif choice == 3:
