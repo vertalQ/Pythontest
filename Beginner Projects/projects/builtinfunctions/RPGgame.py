@@ -92,9 +92,9 @@ def slimeField():
         Choice: '''))
         if dec == 1:
             slime.health -= player.dmg
-            player.health -= slime.dmg
+            #player.health -= slime.dmg
             print('Slime HP: %s' % slime.health)
-            print('Ouch! Player HP: %s' % player.health)
+            #print('Ouch! Player HP: %s' % player.health)
             if player.health <= 0:
                 print('You died! Game Over!')
                 sys.exit()
