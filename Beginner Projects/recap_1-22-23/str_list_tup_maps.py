@@ -23,4 +23,9 @@ for i in range(len(tuple)):
 print(blank * 20)
 
 for i in range(len(map)):
-    print(map[str(i+1)])   
+    print(map[str(i+1)])
+
+# List Arithmetic
+l1 = [1, 2, 3, 4]
+l2 = ['word1', 'grape']
+print(l1 + l2)
