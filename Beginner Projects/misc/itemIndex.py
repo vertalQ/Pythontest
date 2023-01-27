@@ -16,8 +16,24 @@ i = Item()
 def createItem():
     global itemDict
     global i
-    while int(i.index) <= int(max(itemDict.keys())):
-        print('You are current on item %s' % (itemDict[str(i.index)]))
-        i.index += 1
+    print('You are currently on item %s [INDEX: %s]' % (itemDict[str(i.index)], i.index))
+    while True:
+        querINP = input('^ or \/ (a/s): ').lower()
+        if querINP == 'a':
+            if i.index == int(max(itemDict.keys())):
+                print('Reached max!')
+                #i.index -= 1
+            else:
+                i.index += 1
+                print('You are on item %s [INDEX: %s]' % (itemDict[str(i.index)], i.index))
+        elif querINP == 's':
+            if i.index == int(min(itemDict.keys())):
+                print('Reached min!')
+                #i.index += 1
+            else:
+                i.index -= 1
+                print('You are on item %s [INDEX: %s]' % (itemDict[str(i.index)], i.index))
+        elif querINP == 'exit':
+            return 'Exited program.'
 
-createItem()
+print(createItem())
