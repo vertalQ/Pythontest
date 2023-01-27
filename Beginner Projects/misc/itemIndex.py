@@ -4,7 +4,8 @@ itemDict = {
 '2' : 'pear',
 '3' : 'low level sword',
 '4' : 'dragon flesh',
-'5' : 'cooked dragon meat'
+'5' : 'cooked dragon meat',
+'6' : 'wood log'
 }
 
 class Item:
