@@ -1,0 +1,5 @@
+This is save data for a game:
+
+You have 5 coins.
+You have 8/10 health left.
+You have 3 lives left.
