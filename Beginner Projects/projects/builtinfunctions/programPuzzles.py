@@ -16,8 +16,18 @@
 
 #--------------------------------------
 
-hiddenMessage = "this if is not are a reading very this good then way you to have hide done a it message wrong"
-HMLIST = hiddenMessage.splitlines()
-print(help('string'.splitlines))
+hiddenMessage = "this if is you not are a reading very this good then way you to have hide done a it message wrong"
+HMLIST = hiddenMessage.split()
 
-#print(HMLIST)
+#print(len(HMLIST))
+
+
+def skipWord():
+    y = []
+    for i in range(0, len(HMLIST), 2):
+        #print(i)
+        y.append(HMLIST[i])
+    return y
+
+print(skipWord())
+
